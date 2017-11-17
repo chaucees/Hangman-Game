@@ -1,8 +1,28 @@
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+// Define Variables
+
+var wins = "";
+var currentScore = 0;
+var winningScore = 0;
+var randomWordArr = ["fishtown", "south silly", "ben franklin", "cheesesteak"];
+var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+
+// Conditional Statements
+
+// You Win Display
+
+// 
 
 
 
 
 
+//Clear Button
+$("#clear").on("click", function() {
+    $("#display").empty();
+});    
 
-</script>

@@ -76,7 +76,6 @@ h2 {
     position: relative;
     float: left;
     display: inline-block;
-    
 }
 
 .col-container {
@@ -89,5 +88,17 @@ h2 {
     padding: 0px;
     width: 1024px;
     height: 698px;
-    
+}
+
+.letter-button-color {
+    color: #ffffff;
+}
+
+.letter {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 2px;
 }
