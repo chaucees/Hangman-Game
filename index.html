@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hangman: Philadelphi Style</title>
+        <title>Hangman: Philadelphia Style</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         
     </head>
     <body>
-
+        
         <div class="header-container">
             <div class="headerimg"><img src="./images/hangman.png"></div>
         </div>
@@ -25,16 +26,18 @@
 
                 
                 <h1 align="center">Press any key to begin!</p>
-                <h2 align="center">Wins: </h2>
-                <h2 align="center">Current Word</h2>
-                <h2 align="center">Number of Guesses Remaining: </h2>
-                <h2 align="center">Letters Already Guessed:</h2>
-                
-                <div id="buttonsHolder"></div>
-                <div id="name"></div>  
+                <h2 align="center">Wins: <span id="wins"></span></h2>
+                <h2 align="center">Current Word: <span id="current-word" onClick="PickRandomWord(document.WordForm)"></span></h2>
+                <h2 align="center">Your Guess: <span id="user-guess"></span></h2>
+                <h2 align="center">Letters Guessed: <span id="wrong-guess"></span></h2>
+                  
 
             </div>
         </div>
+        
     
+        <script src="./javascript/game.js"></script>
+        
+
     </body>
 </html>
