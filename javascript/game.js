@@ -58,12 +58,8 @@ function update() {
 
 // Displays Current Score
 
-    document.getElementById("wins").innerHTML =currentScore; }
+    document.getElementById("wins").innerHTML = currentScore; }
 
 // NUMBERS OF GUESSES REMAINING 
 
 // RESET BUTTON
-
-
-
-
