@@ -5,10 +5,11 @@ var currentScore = 0;
 var randomWords = ["fishtown", "pretzel", "libertybell", "cheesesteak"];
 var randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
 var currentState = [ ];
+var wrongGuess= [];
 
 // This creates the underscores when the page loads
 for (var i = 0; i < randomWord.length; i++) {
-    currentState.push(" _ ");
+    currentState.push(" _ ");    
 }
 
 // USER GUESS 
@@ -22,27 +23,22 @@ document.onkeyup = function(event) {
     for (var i = 0; i < randomWord.length; i++) {
         if (userGuess === randomWord[i]) {
             currentState[i] = userGuess;
+        } else {
+            wrongGuess.push(userGuess);
         }
     }
+    // DISPLAYS CURRENT WORD
     document.getElementById("current-word").innerHTML = currentState.join(" ");
 
-    // // PRINT GUESSED LETTERS - doesn't work
-    // var wrongGuess= [];
-
-    // for (var i = 0; i < randomWord.length; i++) {
-    //     if (userGuess === randomWord[i]) {
-    //         currentState[i] = wrongGuess;
-    //     }
-    // }
-
-    // document.getElementById("wrong-guess").innerHTML = wrongGuess; 
+    // DISPLAYS WRONG GUESS
+    document.getElementById("wrong-guess").innerHTML = userGuess; 
     
-    // }
+    }
+
+// END FUNCTION
 
 // If they guess the whole word, reset the current state to blank underscores with next word.
-if (userGuess === randomWords[i]) {
-    currentstore+1;
-}
+
 // WIN + LOOSE LOGIC HERE INSIDE THIS
 
 // Loop the game until the user guesses all four words
@@ -58,11 +54,11 @@ for (var i = 0; i < randomWords.legnth; i++) {
 }
 
 function update() {
-    currentScore.text = "SCORE: " + currentScore;}
+    currentScore.text = "SCORE: " + currentScore;
 
 // Displays Current Score
 
-    document.getElementById("wins").innerHTML =currentScore;}
+    document.getElementById("wins").innerHTML =currentScore; }
 
 // NUMBERS OF GUESSES REMAINING 
 
